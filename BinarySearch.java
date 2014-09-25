@@ -8,11 +8,20 @@ import java.io.InputStreamReader;
 public class BinarySearch {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
-		// TODO Auto-generated method stub
 		
-		int num[] = {10,20,30,40,70,80,90,70,80,70,100};
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		System.out.println("Enter String To Find");
+		System.out.println("Enter Array Size");
+		int size = Integer.parseInt(br.readLine());
+		
+		int num[] = new int[size];
+		
+		System.out.println("Enter Array Elements");
+		for(int i=0; i<size ; i++)
+		{
+			num[i] = Integer.parseInt(br.readLine());
+		}
+		
+		System.out.println("Enter Item To Find");
 		int search_item = Integer.parseInt(br.readLine());
 		
 		int low=0;
@@ -35,6 +44,8 @@ public class BinarySearch {
 				high = mid - 1;
 			else if (search_item > num[mid])
 				low = mid + 1;
+			
+			System.out.println("Iterations :" + i);
 		}
 		
 		if (flag)
