@@ -35,8 +35,6 @@ public class BinarySearch {
 				high = mid - 1;
 			else if (search_item > num[mid])
 				low = mid + 1;
-			
-			System.out.println("Iterations :" + i);
 		}
 		
 		if (flag)
